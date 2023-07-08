@@ -86,7 +86,7 @@ class SnapshotRecorder {
     this.sessionId = uuidv4();
     this.globalTimer = setInterval(() => {
       this.sendEvents(Date.now());
-    }, 4000);
+    }, this.options?.sendEventsInterval || 4000);
     this.stopFn = record({
       emit: (event: any) => {
         this.events.push(event);
@@ -98,7 +98,8 @@ class SnapshotRecorder {
         input: 'last',
       },
       packFn: pack,
-      recordCanvas: true
+      recordCanvas: true,
+      ...this.options?.sessionConfig
     });
   };
 
