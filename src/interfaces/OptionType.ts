@@ -4,4 +4,6 @@ export interface OptionType {
     deviceId?: string;
     userEmail?: string;
     metaData?: any;
+    sendEventsInterval?: number;
+    sessionConfig?: any;
 }

@@ -1,6 +1,6 @@
 {
   "name": "rrweb-session-recorder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "record session with rrweb",
   "main": "dist/index.js",
   "scripts": {
